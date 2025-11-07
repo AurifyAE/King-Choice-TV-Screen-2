@@ -24,10 +24,9 @@ const SpotRate = () => {
   const renderCompactSpotSection = (metal, data, isPrimary = false) => (
     <Box
       sx={{
-        background: "rgba(209, 164, 79, 0.08)",
-        border: "1px solid #C79324",
-        borderRadius: "10px",
-        padding: "12px",
+        border: "2px solid #C79324",
+        borderRadius: "7px",
+        padding: "22px",
         height: "100%",
         transition: "all 0.3s ease",
         "&:hover": {
@@ -48,7 +47,7 @@ const SpotRate = () => {
         <Typography
           sx={{
             color: "#C79324",
-            fontSize: isPrimary ? "1.3rem" : "1.15rem",
+            fontSize: isPrimary ? "1.5rem" : "1.35rem",
             fontWeight: "700",
             textTransform: "uppercase",
             letterSpacing: "0.06em",
@@ -59,7 +58,7 @@ const SpotRate = () => {
         <Typography
           sx={{
             color: "rgba(255, 255, 255, 0.6)",
-            fontSize: "1rem",
+            fontSize: "1.1rem",
             fontWeight: "500",
           }}
         >
@@ -76,7 +75,7 @@ const SpotRate = () => {
             <Typography
               sx={{
                 color: "rgba(255, 255, 255, 0.8)",
-                fontSize: "0.75rem",
+                fontSize: "0.85rem",
                 fontWeight: "600",
                 writingMode: "vertical-rl",
                 textOrientation: "mixed",
@@ -100,7 +99,7 @@ const SpotRate = () => {
                 <Typography
                   sx={{
                     color: "#FFFFFF",
-                    fontSize: isPrimary ? "1.4rem" : "1.3rem",
+                    fontSize: isPrimary ? "2rem" : "2rem",
                     fontWeight: "bold",
                     fontFamily: "monospace",
                   }}
@@ -119,7 +118,7 @@ const SpotRate = () => {
             <Typography
               sx={{
                 color: "rgba(255, 255, 255, 0.8)",
-                fontSize: "0.75rem",
+                fontSize: "0.85rem",
                 fontWeight: "600",
                 writingMode: "vertical-rl",
                 textOrientation: "mixed",
@@ -143,7 +142,7 @@ const SpotRate = () => {
                 <Typography
                   sx={{
                     color: "#FFFFFF",
-                    fontSize: isPrimary ? "1.4rem" : "1.3rem",
+                    fontSize: isPrimary ? "2rem" : "2rem",
                     fontWeight: "bold",
                     fontFamily: "monospace",
                   }}
@@ -185,7 +184,7 @@ const SpotRate = () => {
             <Typography
               sx={{
                 color: "#22c55e",
-                fontSize: "1rem",
+                fontSize: "1.2rem",
                 fontWeight: "bold",
                 fontFamily: "monospace",
               }}
@@ -210,7 +209,7 @@ const SpotRate = () => {
             <Typography
               sx={{
                 color: "rgba(239, 68, 68, 0.9)",
-                fontSize: "1rem",
+                fontSize: "1.2rem",
                 fontWeight: "600",
                 textTransform: "uppercase",
               }}
@@ -235,7 +234,91 @@ const SpotRate = () => {
 
   return (
     <Box sx={{ backgroundColor: "transparent", marginTop: "4px" }}>
-      <Grid container spacing={1.5} sx={{ maxWidth: "700px" }}>
+      {/* Custom Header */}
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          marginBottom: "12px",
+          padding: "0 4px",
+        }}
+      >
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            gap: "12px",
+          }}
+        >
+          <Box
+            sx={{
+              width: "4px",
+              height: "20px",
+              backgroundColor: "#C79324",
+              borderRadius: "2px",
+            }}
+          />
+          <Box>
+            <Box
+              sx={{
+                color: "#C79324",
+                fontSize: { xs: "12px", sm: "14px", md: "18px", lg: "1.5vw" },
+                fontWeight: "700",
+                letterSpacing: "0.05em",
+              }}
+            >
+              SPOT RATE
+            </Box>
+          </Box>
+        </Box>
+
+        {/* Live Indicator */}
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            gap: "6px",
+            background: "rgba(34, 197, 94, 0.1)",
+            border: "1px solid rgba(34, 197, 94, 0.3)",
+            borderRadius: "20px",
+            padding: "4px 10px",
+          }}
+        >
+          <Box
+            sx={{
+              width: "6px",
+              height: "6px",
+              borderRadius: "50%",
+              backgroundColor: "#22c55e",
+              animation: "pulse 2s infinite",
+              "@keyframes pulse": {
+                "0%": {
+                  boxShadow: "0 0 0 0 rgba(34, 197, 94, 0.7)",
+                },
+                "70%": {
+                  boxShadow: "0 0 0 10px rgba(34, 197, 94, 0)",
+                },
+                "100%": {
+                  boxShadow: "0 0 0 0 rgba(34, 197, 94, 0)",
+                },
+              },
+            }}
+          />
+          <Box
+            sx={{
+              color: "#22c55e",
+              fontSize: "0.6rem",
+              fontWeight: "600",
+              textTransform: "uppercase",
+              letterSpacing: "0.05em",
+            }}
+          >
+            LIVE
+          </Box>
+        </Box>
+      </Box>
+      <Grid container spacing={1.5} sx={{ maxWidth: "1000px" }}>
         <Grid item xs={12} sm={6}>
           {renderCompactSpotSection("GOLD", goldData, true)}
         </Grid>

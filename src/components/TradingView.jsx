@@ -93,7 +93,7 @@ function TradingViewWidget() {
               <Box
                 sx={{
                   color: "#C79324",
-                  fontSize: "1rem",
+                  fontSize: { xs: "12px", sm: "14px", md: "18px", lg: "1.5vw" },
                   fontWeight: "700",
                   letterSpacing: "0.05em",
                 }}
@@ -162,7 +162,7 @@ function TradingViewWidget() {
         <Box
           ref={container}
           sx={{
-            height: "570px",
+            height: "440px",
             width: "100%",
             borderRadius: "8px",
             overflow: "hidden",

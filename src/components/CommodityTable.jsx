@@ -100,11 +100,11 @@ const CommodityTable = ({ commodities }) => {
                 sx={{
                   color: "#FFFFFF",
                   fontWeight: "bold",
-                  fontSize: { xs: "10px", sm: "11px", md: "15px", lg: "1.2vw" },
+                  fontSize: { xs: "12px", sm: "14px", md: "18px", lg: "1.5vw" },
                   textAlign: "center",
                   border: "1px solid #C79324",
                   backgroundColor: "transparent",
-                  padding: "4px 6px",
+                  padding: "6px 6px",
                 }}
               >
                 COMMODITY
@@ -113,11 +113,11 @@ const CommodityTable = ({ commodities }) => {
                 sx={{
                   color: "#FFFFFF",
                   fontWeight: "bold",
-                  fontSize: { xs: "10px", sm: "11px", md: "15px", lg: "1.2vw" },
+                  fontSize: { xs: "12px", sm: "14px", md: "18px", lg: "1.5vw" },
                   textAlign: "center",
                   border: "1px solid #C79324",
                   backgroundColor: "transparent",
-                  padding: "4px 6px",
+                  padding: "6px 6px",
                 }}
               >
                 BID (AED)
@@ -126,11 +126,11 @@ const CommodityTable = ({ commodities }) => {
                 sx={{
                   color: "#FFFFFF",
                   fontWeight: "bold",
-                  fontSize: { xs: "10px", sm: "11px", md: "15px", lg: "1.2vw" },
+                  fontSize: { xs: "12px", sm: "14px", md: "18px", lg: "1.5vw" },
                   textAlign: "center",
                   border: "1px solid #C79324",
                   backgroundColor: "transparent",
-                  padding: "4px 6px",
+                  padding: "6px 6px",
                 }}
               >
                 ASK (AED)
@@ -196,11 +196,11 @@ const CommodityTable = ({ commodities }) => {
                     sx={{
                       color: "#C79324",
                       fontWeight: "bold",
-                      fontSize: { xs: "10px", sm: "11px", md: "15px", lg: "1.2vw" },
+                      fontSize: { xs: "12px", sm: "14px", md: "18px", lg: "1.5vw" },
                       textAlign: "center",
                       border: "1px solid #C79324",
                       backgroundColor: "transparent",
-                      padding: "4px 6px",
+                      padding: "6px 6px",
                     }}
                   >
                     {getMetalName(commodity.metal)}{" "}
@@ -215,11 +215,11 @@ const CommodityTable = ({ commodities }) => {
                     sx={{
                       color: "#C79324",
                       fontWeight: "bold",
-                      fontSize: { xs: "10px", sm: "11px", md: "15px", lg: "1.2vw" },
+                      fontSize: { xs: "12px", sm: "14px", md: "18px", lg: "1.5vw" },
                       textAlign: "center",
                       border: "1px solid #C79324",
                       backgroundColor: "transparent",
-                      padding: "4px 6px",
+                      padding: "6px 6px",
                     }}
                   >
                     {formatValue(buyPrice, weight)}
@@ -230,11 +230,11 @@ const CommodityTable = ({ commodities }) => {
                     sx={{
                       color: "#C79324",
                       fontWeight: "bold",
-                      fontSize: { xs: "10px", sm: "11px", md: "15px", lg: "1.2vw" },
+                      fontSize: { xs: "12px", sm: "14px", md: "18px", lg: "1.5vw" },
                       textAlign: "center",
                       border: "1px solid #C79324",
                       backgroundColor: "transparent",
-                      padding: "4px 6px",
+                      padding: "6px 6px",
                     }}
                   >
                     {formatValue(sellPrice, weight)}

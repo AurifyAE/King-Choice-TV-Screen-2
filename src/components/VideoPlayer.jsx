@@ -3,7 +3,7 @@ import React from 'react';
 // noo
 const VideoPlayer = () => {
   return (
-    <div className="w-full h-full mt-5 rounded-md">
+    <div className="w-full h-full mt-8 rounded-md">
       <iframe
         width="100%"
         height="100%"
@@ -12,7 +12,7 @@ const VideoPlayer = () => {
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
-        style={{ minHeight: '630px' }}
+        style={{ minHeight: '440px' }}
         className='rounded-md'
       ></iframe>
     </div>

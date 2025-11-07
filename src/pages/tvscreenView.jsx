@@ -196,20 +196,18 @@ function TvScreen() {
 
   return (
     <Box sx={{ minHeight: "100vh", color: "white", padding: "20px" }}>
-      <Box className="flex flex-row items-center justify-between">
+      <Box className="flex flex-row items-center justify-between w-full">
         <Box
           className="flex flex-col items-center justify-center gap-10"
         >
-          <img src={kingChoices} alt="" className="w-32 h-32" />
+          <img src={kingChoices} alt="" className="w-52 h-52" />
         </Box>
 
         {/* Carousel */}
         <Carousel />
 
-        {/* SpotRate Component */}
-        <div className="min-w-[700px]">
-          <SpotRate />
-        </div>
+        {/* London Fix Component */}
+        <LondonFix marketData={marketData} />
 
         {/* Updated Date & Time Section */}
         <Box
@@ -219,7 +217,7 @@ function TvScreen() {
           <Typography
             sx={{
               color: "#C79324",
-              fontSize: "2.5vw",
+              fontSize: { xs: "12px", sm: "14px", md: "18px", lg: "3.5vw" },
               fontWeight: "bold",
               lineHeight: 1,
             }}
@@ -231,7 +229,7 @@ function TvScreen() {
           <Typography
             sx={{
               color: "#C79324",
-              fontSize: "1.2vw",
+              fontSize: { xs: "12px", sm: "14px", md: "18px", lg: "1.5vw" },
               fontWeight: "bold",
               textTransform: "uppercase",
               letterSpacing: "1px",
@@ -245,7 +243,7 @@ function TvScreen() {
           <Typography
             sx={{
               color: "#C79324",
-              fontSize: "1.2vw",
+              fontSize: { xs: "12px", sm: "14px", md: "18px", lg: "1.5vw" },
               fontWeight: "bold",
               textTransform: "uppercase",
               letterSpacing: "1px",
@@ -277,8 +275,10 @@ function TvScreen() {
 
         {/* Side: SpotRate */}
         <Grid item xs={12} md={6}>
-          {/* London Fix Component */}
-          <LondonFix marketData={marketData} />
+          {/* SpotRate Component */}
+          <div className="min-w-[700px]">
+            <SpotRate />
+          </div>
 
           {/* Video Player Component */}
           <VideoPlayer />

@@ -69,17 +69,18 @@ const LondonFix = () => {
     gold?.amPrice && gold?.pmPrice ? (gold.pmPrice - gold.amPrice).toFixed(2) : "-";
 
   return (
-    <Box sx={{ backgroundColor: "transparent" }}>
+    <Box sx={{
+      backgroundColor: "transparent",
+    }}>
       <TableContainer
         component={Paper}
         sx={{
-          backgroundColor: "rgba(209,164,79,0.05)",
+          backgroundColor: "transparent",
           borderRadius: "6px",
           border: "1px solid #D1A44F",
-          boxShadow: "0 6px 18px rgba(209,164,79,0.15)",
-          width: { xs: "100%", sm: "100%", md: "100%", lg: "100%" },
           overflow: "hidden",
           marginTop: "15px",
+          width: '50vw',
         }}
       >
         <Table size="small">
@@ -92,7 +93,7 @@ const LondonFix = () => {
                   sx={{
                     color: "#FFFFFF",
                     fontWeight: "bold",
-                    fontSize: { xs: "0.75rem", sm: "0.85rem", md: "1rem" },
+                    fontSize: { xs: "12px", sm: "14px", md: "18px", lg: "1.5vw" },
                     textAlign: "center",
                     border: "1px solid #C79324",
                     padding: "10px 12px",
@@ -118,7 +119,7 @@ const LondonFix = () => {
                 sx={{
                   color: "#D1A44F",
                   fontWeight: "bold",
-                  fontSize: { xs: "0.8rem", sm: "0.95rem", md: "1.05rem" },
+                  fontSize: { xs: "12px", sm: "14px", md: "18px", lg: "1.5vw" },
                   textAlign: "center",
                   border: "1px solid #C79324",
                   padding: "10px 12px",
@@ -133,7 +134,7 @@ const LondonFix = () => {
                   sx={{
                     color: "#C79324",
                     fontWeight: "bold",
-                    fontSize: { xs: "0.8rem", sm: "0.95rem", md: "1.05rem" },
+                    fontSize: { xs: "12px", sm: "14px", md: "18px", lg: "1.5vw" },
                     fontFamily: "monospace",
                   }}
                 >
@@ -146,7 +147,7 @@ const LondonFix = () => {
                   sx={{
                     color: "#C79324",
                     fontWeight: "bold",
-                    fontSize: { xs: "0.8rem", sm: "0.95rem", md: "1.05rem" },
+                    fontSize: { xs: "12px", sm: "14px", md: "18px", lg: "1.5vw" },
                     fontFamily: "monospace",
                   }}
                 >
@@ -161,9 +162,9 @@ const LondonFix = () => {
                       goldChange !== "-" && parseFloat(goldChange) > 0
                         ? "#4CAF50"
                         : goldChange !== "-" && parseFloat(goldChange) < 0
-                        ? "#F44336"
-                        : "#FFFFFF",
-                    fontSize: { xs: "0.8rem", sm: "0.95rem", md: "1.05rem" },
+                          ? "#F44336"
+                          : "#FFFFFF",
+                          fontSize: { xs: "12px", sm: "14px", md: "18px", lg: "1.5vw" },
                     fontWeight: "bold",
                     fontFamily: "monospace",
                   }}
@@ -187,7 +188,7 @@ const LondonFix = () => {
                 sx={{
                   color: "#D1A44F",
                   fontWeight: "bold",
-                  fontSize: { xs: "0.8rem", sm: "0.95rem", md: "1.05rem" },
+                  fontSize: { xs: "12px", sm: "14px", md: "18px", lg: "1.5vw" },
                   textAlign: "center",
                   border: "1px solid #C79324",
                   padding: "10px 12px",
@@ -202,7 +203,7 @@ const LondonFix = () => {
                   sx={{
                     color: "#C79324",
                     fontWeight: "bold",
-                    fontSize: { xs: "0.8rem", sm: "0.95rem", md: "1.05rem" },
+                    fontSize: { xs: "12px", sm: "14px", md: "18px", lg: "1.5vw" },
                     fontFamily: "monospace",
                   }}
                 >
@@ -220,7 +221,7 @@ const LondonFix = () => {
                 <Typography
                   sx={{
                     color: "#FFFFFF",
-                    fontSize: { xs: "0.8rem", sm: "0.95rem", md: "1.05rem" },
+                    fontSize: { xs: "12px", sm: "14px", md: "18px", lg: "1.5vw" },
                     fontWeight: "bold",
                     fontFamily: "monospace",
                   }}
@@ -239,7 +240,7 @@ const LondonFix = () => {
                 <Typography
                   sx={{
                     color: "#FFFFFF",
-                    fontSize: { xs: "0.8rem", sm: "0.95rem", md: "1.05rem" },
+                    fontSize: { xs: "12px", sm: "14px", md: "18px", lg: "1.5vw" },
                     fontWeight: "bold",
                     fontFamily: "monospace",
                   }}

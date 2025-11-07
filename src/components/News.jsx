@@ -11,8 +11,8 @@ const NewsTicker = ({ newsItems }) => {
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "center",
-        borderRadius: "10px",
-        height: "35px",
+        borderRadius: "8px",
+        height: "45px",
         marginTop: "15px",
       }}
     >
@@ -23,10 +23,10 @@ const NewsTicker = ({ newsItems }) => {
           color: "white",
           fontWeight: "bold",
           textAlign: "center",
-          fontSize: "1.1vw",
-          width: "250px",
+          fontSize: "1.4vw",
+          width: "300px",
           height: "100%",
-          borderRadius: "8px",
+          borderRadius: "6px",
         }}
       >
         KING CHOICE
@@ -46,7 +46,7 @@ const NewsTicker = ({ newsItems }) => {
             display: "inline-block",
             animation: "scroll 40s linear infinite",
             color: "white",
-            fontSize: "1.2vw",
+            fontSize: "1.5vw",
             textAlign: "center",
           }}
         >
@@ -58,7 +58,7 @@ const NewsTicker = ({ newsItems }) => {
                 marginRight: "4vw",
                 display: "inline-block",
                 color: "white",
-                fontSize: "1.2vw",
+                fontSize: "1.5vw",
               }}
             >
               {item.description}
