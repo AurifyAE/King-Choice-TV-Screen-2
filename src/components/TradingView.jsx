@@ -200,36 +200,6 @@ function TradingViewWidget() {
           }}
         />
       </Box>
-
-      {/* Chart Information Footer */}
-      {/* <Box
-        sx={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          marginTop: "12px",
-          padding: "8px 4px",
-        }}
-      >
-        <Box
-          sx={{
-            color: "rgba(255, 255, 255, 0.5)",
-            fontSize: "0.7rem",
-            fontStyle: "italic",
-          }}
-        >
-          Chart powered by TradingView • Real-time data
-        </Box>
-        <Box
-          sx={{
-            color: "rgba(255, 255, 255, 0.5)",
-            fontSize: "0.7rem",
-            fontStyle: "italic",
-          }}
-        >
-          Last updated: {new Date().toLocaleTimeString()}
-        </Box>
-      </Box> */}
     </Box>
   );
 }

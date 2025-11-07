@@ -86,7 +86,7 @@ const LondonFix = () => {
         <Table size="small">
           {/* Table Header */}
           <TableHead>
-            <TableRow sx={{ backgroundColor: "#0b0b0b" }}>
+            <TableRow sx={{ backgroundColor: "#000000" }}>
               {["METAL", "AM FIXING", "PM FIXING", "CHANGE"].map((header) => (
                 <TableCell
                   key={header}
@@ -98,7 +98,7 @@ const LondonFix = () => {
                     border: "1px solid #C79324",
                     padding: "10px 12px",
                     letterSpacing: "0.05em",
-                    background: "linear-gradient(180deg, #111827, #0b0b0b)",
+                    background: " #0b0b0b",
                   }}
                 >
                   {header}
