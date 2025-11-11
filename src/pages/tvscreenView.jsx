@@ -275,7 +275,7 @@ function TvScreen() {
           <CommodityTable commodities={commodities} />
 
           {/* Currency Component */}
-          <TradingViewWidget3 />
+          {/* <TradingViewWidget3 /> */}
 
           {/* News Component */}
           <NewsTicker newsItems={news} />

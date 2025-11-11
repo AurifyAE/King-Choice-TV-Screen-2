@@ -72,6 +72,91 @@ const LondonFix = () => {
     <Box sx={{
       backgroundColor: "transparent",
     }}>
+      {/* Custom Header */}
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          marginBottom: "12px",
+          padding: "0 4px",
+          marginTop: "25px",
+        }}
+      >
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            gap: "12px",
+          }}
+        >
+          <Box
+            sx={{
+              width: "4px",
+              height: "20px",
+              backgroundColor: "#C79324",
+              borderRadius: "2px",
+            }}
+          />
+          <Box>
+            <Box
+              sx={{
+                color: "#C79324",
+                fontSize: { xs: "12px", sm: "14px", md: "18px", lg: "1.5vw" },
+                fontWeight: "700",
+                letterSpacing: "0.05em",
+              }}
+            >
+              LONDON FIX
+            </Box>
+          </Box>
+        </Box>
+
+        {/* Live Indicator */}
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            gap: "6px",
+            background: "rgba(34, 197, 94, 0.1)",
+            border: "1px solid rgba(34, 197, 94, 0.3)",
+            borderRadius: "20px",
+            padding: "4px 10px",
+          }}
+        >
+          <Box
+            sx={{
+              width: "6px",
+              height: "6px",
+              borderRadius: "50%",
+              backgroundColor: "#22c55e",
+              animation: "pulse 2s infinite",
+              "@keyframes pulse": {
+                "0%": {
+                  boxShadow: "0 0 0 0 rgba(34, 197, 94, 0.7)",
+                },
+                "70%": {
+                  boxShadow: "0 0 0 10px rgba(34, 197, 94, 0)",
+                },
+                "100%": {
+                  boxShadow: "0 0 0 0 rgba(34, 197, 94, 0)",
+                },
+              },
+            }}
+          />
+          <Box
+            sx={{
+              color: "#22c55e",
+              fontSize: "0.6rem",
+              fontWeight: "600",
+              textTransform: "uppercase",
+              letterSpacing: "0.05em",
+            }}
+          >
+            LIVE
+          </Box>
+        </Box>
+      </Box>
       <TableContainer
         component={Paper}
         sx={{
@@ -79,7 +164,6 @@ const LondonFix = () => {
           borderRadius: "6px",
           border: "1px solid #D1A44F",
           overflow: "hidden",
-          marginTop: "15px",
         }}
       >
         <Table size="small">
@@ -163,7 +247,7 @@ const LondonFix = () => {
                         : goldChange !== "-" && parseFloat(goldChange) < 0
                           ? "#F44336"
                           : "#FFFFFF",
-                          fontSize: { xs: "12px", sm: "14px", md: "18px", lg: "1.5vw" },
+                    fontSize: { xs: "12px", sm: "14px", md: "18px", lg: "1.5vw" },
                     fontWeight: "bold",
                     fontFamily: "monospace",
                   }}

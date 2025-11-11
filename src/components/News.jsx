@@ -13,7 +13,7 @@ const NewsTicker = ({ newsItems }) => {
         justifyContent: "center",
         borderRadius: "8px",
         height: "45px",
-        marginTop: "15px",
+        marginTop: "25px",
       }}
     >
       <Typography

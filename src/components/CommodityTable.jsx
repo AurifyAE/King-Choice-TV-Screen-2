@@ -76,7 +76,7 @@ const CommodityTable = ({ commodities }) => {
   return (
     <Box sx={{
       backgroundColor: "transparent",
-      marginTop: "18px",
+      marginTop: "25px",
     }}>
       {/* Commodity Table */}
       <TableContainer
