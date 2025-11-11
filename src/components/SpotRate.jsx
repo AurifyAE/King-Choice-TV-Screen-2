@@ -233,7 +233,7 @@ const SpotRate = () => {
   );
 
   return (
-    <Box sx={{ backgroundColor: "transparent", marginTop: "4px" }}>
+    <Box sx={{ backgroundColor: "transparent", marginTop: "28px" }}>
       {/* Custom Header */}
       <Box
         sx={{
@@ -318,7 +318,7 @@ const SpotRate = () => {
           </Box>
         </Box>
       </Box>
-      <Grid container spacing={1.5} sx={{ maxWidth: "1000px" }}>
+      <Grid container spacing={1.5} sx={{ maxWidth: "1300px" }}>
         <Grid item xs={12} sm={6}>
           {renderCompactSpotSection("GOLD", goldData, true)}
         </Grid>

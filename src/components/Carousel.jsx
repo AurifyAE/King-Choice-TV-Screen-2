@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Box } from "@mui/material";
-import image1 from "../assets/image1.jpg";
-import image2 from "../assets/image2.webp";
-import image3 from "../assets/image3.jpeg";
+import image1 from "../assets/image1.png";
+import image2 from "../assets/image2.png";
+import image3 from "../assets/image3.png";
+import image4 from "../assets/image4.png";
+import image5 from "../assets/image5.png";
+import image6 from "../assets/image6.png";
 
-const images = [image1, image2, image3];
+const images = [image1, image2, image3, image4, image5, image6];
 
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -24,7 +27,7 @@ const Carousel = () => {
       <img
         src={images[currentIndex]}
         alt={`Carousel image ${currentIndex + 1}`}
-        className="w-full h-40 rounded-xl mb-3 object-fit"
+        className="w-full h-48 rounded-xl mb-3 object-fit"
       />
     </Box>
   );

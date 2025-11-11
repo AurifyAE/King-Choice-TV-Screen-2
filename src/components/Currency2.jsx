@@ -20,7 +20,7 @@ function TradingViewWidget4() {
       "showSymbolLogo": true,
       "backgroundColor": "#0F0F0F",
       "support_host": "https://www.tradingview.com",
-      "width": "100%",
+      "width": "40%",
       "height": 200,
       "symbolsGroups": [
         {

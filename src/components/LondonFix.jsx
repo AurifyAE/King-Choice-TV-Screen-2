@@ -80,7 +80,6 @@ const LondonFix = () => {
           border: "1px solid #D1A44F",
           overflow: "hidden",
           marginTop: "15px",
-          width: '50vw',
         }}
       >
         <Table size="small">

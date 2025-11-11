@@ -162,7 +162,7 @@ function TradingViewWidget() {
         <Box
           ref={container}
           sx={{
-            height: "440px",
+            height: "370px",
             width: "100%",
             borderRadius: "8px",
             overflow: "hidden",

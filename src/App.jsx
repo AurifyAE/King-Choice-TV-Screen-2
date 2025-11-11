@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
-import { SpotRateProvider } from "./context/SpotRateContext";
+import { useState, useEffect } from "react";
 import { useConnectionState } from "use-connection-state";
+import { SpotRateProvider } from "./context/SpotRateContext";
 import "./App.css";
 import TvScreen from "./pages/tvscreenView";
 import ErrorPage from "./components/ErrorPage";
@@ -9,57 +9,47 @@ function App() {
   const [isTvScreen, setIsTvScreen] = useState(window.innerWidth >= 100);
 
   useEffect(() => {
-    const baseWidth = 1920;
-    const baseHeight = 1080;
-    const app = document.getElementById("tv-app-container");
-
-    if (!app) return;
-
-    // Debounce function for better performance
-    let resizeTimeout;
-    const debounce = (func, delay = 100) => {
-      clearTimeout(resizeTimeout);
-      resizeTimeout = setTimeout(func, delay);
+    // Listen to resize changes
+    const handleResize = () => {
+      setIsTvScreen(window.innerWidth >= 100);
+      scaleApp(); // Recalculate scale when screen changes
     };
 
-    // Advanced scaling logic
+    // Scaling function
     const scaleApp = () => {
+      const app = document.getElementById("tv-app-container");
       if (!app) return;
 
-      const screenWidth = window.innerWidth;
-      const screenHeight = window.innerHeight;
+      // Your base design dimensions (1080p layout)
+      const baseWidth = 1920;
+      const baseHeight = 1080;
 
-      // Calculate scale maintaining aspect ratio
-      const scale = Math.min(screenWidth / baseWidth, screenHeight / baseHeight);
+      // Calculate scale based on window size
+      const scaleX = window.innerWidth / baseWidth;
+      const scaleY = window.innerHeight / baseHeight;
+      const scale = Math.min(scaleX, scaleY);
 
-      // Center positioning (letterboxing effect)
-      const offsetX = (screenWidth - baseWidth * scale) / 2;
-      const offsetY = (screenHeight - baseHeight * scale) / 2;
-
-      // Apply styles
+      // Apply scale transform
       app.style.transform = `scale(${scale})`;
       app.style.transformOrigin = "top left";
+
+      // Optional: keep centered
+      const offsetX = (window.innerWidth - baseWidth * scale) / 2;
+      const offsetY = (window.innerHeight - baseHeight * scale) / 2;
       app.style.position = "absolute";
       app.style.left = `${offsetX}px`;
       app.style.top = `${offsetY}px`;
-      app.style.transition = "transform 0.2s ease, left 0.2s ease, top 0.2s ease";
-    };
-
-    // Handle resize event
-    const handleResize = () => {
-      setIsTvScreen(window.innerWidth >= 100);
-      debounce(scaleApp, 150);
     };
 
     // Initialize once
     scaleApp();
+
     window.addEventListener("resize", handleResize);
     window.addEventListener("load", scaleApp);
 
     return () => {
       window.removeEventListener("resize", handleResize);
       window.removeEventListener("load", scaleApp);
-      clearTimeout(resizeTimeout);
     };
   }, []);
 

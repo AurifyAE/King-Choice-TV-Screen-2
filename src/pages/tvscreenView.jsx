@@ -206,8 +206,8 @@ function TvScreen() {
         {/* Carousel */}
         <Carousel />
 
-        {/* London Fix Component */}
-        <LondonFix marketData={marketData} />
+        {/* TradingView Currency Widget */}
+        <TradingViewWidget4 />
 
         {/* Updated Date & Time Section */}
         <Box
@@ -265,36 +265,33 @@ function TvScreen() {
         justifyContent="space-between"
       >
         {/* Side: Commodity Table */}
-        <Grid item xs={12} md={6}>
-          {/* Commodity Table */}
-          <CommodityTable commodities={commodities} />
-
-          {/* TradingView Widget */}
-          <TradingViewWidget />
-        </Grid>
-
-        {/* Side: SpotRate */}
-        <Grid item xs={12} md={6}>
-          {/* SpotRate Component */}
-          <div className="min-w-[700px]">
+        <Grid item xs={12} md={7}>
+          <div className="min-w-[900px]">
             <SpotRate />
           </div>
 
-          {/* Video Player Component */}
+          <LondonFix marketData={marketData} />
+
+          <CommodityTable commodities={commodities} />
+
+          {/* Currency Component */}
+          <TradingViewWidget3 />
+
+          {/* News Component */}
+          <NewsTicker newsItems={news} />
+        </Grid>
+
+        {/* Side: SpotRate */}
+        <Grid item xs={12} md={5}>
+
           <VideoPlayer />
+
+          <TradingViewWidget />
 
           {/* Stock Trading Component */}
           {/* <TradingViewWidget2 /> */}
-
-          {/* Currency Component */}
-          {/* <TradingViewWidget3/> */}
-
-          {/* <TradingViewWidget4 />  */}
         </Grid>
       </Grid>
-
-      {/* News Component */}
-      <NewsTicker newsItems={news} />
 
       {/* Conditional rendering of the modal */}
       {showLimitModal && <LimitExceededModal />}
